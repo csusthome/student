@@ -31,8 +31,9 @@ import android.widget.Toast;
 public class LoginActivity extends Activity implements OnClickListener {
 
 	private ImageView mClose;
-	private RelativeLayout mLogin, mWeibo, mQQ;
-
+	private RelativeLayout mWeibo, mQQ;
+	private Button mLogin;
+	
 	private EditText mName, mPassword;
 	private TextView mRegister;
 	private String NameValue = null;
@@ -56,7 +57,8 @@ public class LoginActivity extends Activity implements OnClickListener {
 		mProDialog = new ProgressDialog(this);
 		mProDialog.setCancelable(true);
 		mClose = (ImageView) findViewById(R.id.loginClose);
-		mLogin = (RelativeLayout) findViewById(R.id.login);
+		//mLogin = (RelativeLayout) findViewById(R.id.login);
+		mLogin = (Button) findViewById(R.id.Ledit_login);
 		
 		mWeibo = (RelativeLayout) findViewById(R.id.button_weibo);
 		mQQ = (RelativeLayout) findViewById(R.id.buton_qq);
@@ -77,9 +79,9 @@ public class LoginActivity extends Activity implements OnClickListener {
 		int mId = v.getId();
 		switch (mId) {
 		case R.id.loginClose:
-			finish();
+			//finish();
 			break;
-		case R.id.login:
+		case R.id.Ledit_login:
 			NameValue = mName.getText().toString();
 			PasswordValue = mPassword.getText().toString();
 			Log.e("qianpengyu", "NameValue" + NameValue + "  PasswordValue"
