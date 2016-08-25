@@ -43,6 +43,7 @@ public class AddCourseActivity extends Activity implements OnClickListener {
 	private RadioGroup mRadioGroup;
 	private RadioButton radioTeacher, radioCourse;
 	private EditText editTeacher, editCourse;
+	
 
 	// 获得隐藏控件
 	private TextView HomeNoValue;
